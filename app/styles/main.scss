@@ -7,20 +7,45 @@ body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  @include outer-container;
+  /* background:url('http://img4.wikia.nocookie.net/__cb20120124131942/elderscrolls/images/8/88/Skyrimmap.png'); */
 }
 
 .hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
+  @include span-columns(12);
+  background-color:HSLA(49, 70%, 50%, 1);
+  overflow:auto;
+  margin:0;
+  /* color:white; */
   h1 {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
+    text-align:center;
+
+  }
+  .char-cards{
+    overflow:auto;
+    text-align:center;
+    .card{
+
+      float: left;
+      overflow:hidden;
+      display: block;
+      @include span-columns(4);
+      height: 130px;
+      padding: 10px;
+      margin: 3px;
+      border-style: solid;
+      border-width: 1px;
+      text-align: center;
+      button{
+        display:block;
+        margin:5px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+    }
   }
 }
