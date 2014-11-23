@@ -8,12 +8,7 @@
       $scope.characters = results;
     });
 
-    $scope.charDelete = function(x){
-      console.log(x);
-      $http.delete(appUrl + x).success(function(){
-        $location.path('/');
-      });
-    }
+  
 
     $scope.showEdit = function(x){
       console.log(x);

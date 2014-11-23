@@ -15,5 +15,14 @@
     })
   }
 
+    $scope.charDelete = function(character){
+      console.log(character);
+      $http.delete(appUrl + character).success(function(){
+        console.log('deleted')
+        $location.path('/');
+      });
+    }
+
+
   }]);
 }());
