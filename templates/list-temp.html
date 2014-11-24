@@ -1,0 +1,13 @@
+<div class="char-cards" >
+  <div class="card" ng-repeat="x in characters">
+    <lable>Name:<span>{{x.name}}</span></lable>
+    <br>
+    <label>Class:<span>{{x.class}}</span></label>
+    <br>
+    <label>Type:<span>{{x.type}}</span></label>
+    <br>
+    
+    <button ng-click='showEdit(x._id)'>edit</button>
+
+  </div>
+</div>
